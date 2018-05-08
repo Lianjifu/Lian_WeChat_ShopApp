@@ -17,6 +17,9 @@ class RET:
     IOERR = "4302"
     SERVERERR = "4500"
     UNKOWNERR = "4501"
+    # 支付CODE
+    NOTPAY = "4600"
+    REFUNDERROR = "4601"
 
 
 error_map = {
@@ -37,4 +40,7 @@ error_map = {
     RET.IOERR: u"文件读写错误",
     RET.SERVERERR: u"内部错误",
     RET.UNKOWNERR: u"未知错误",
+    # 支付CODE
+    RET.NOTPAY: u"未支付",
+    RET.REFUNDERROR: u"退款失败"
 }

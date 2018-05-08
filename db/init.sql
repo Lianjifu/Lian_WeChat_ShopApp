@@ -65,3 +65,10 @@ CREATE TABLE `ywgsh_wxshop_dev`.`wxshop_express` (
   `e_province` VARCHAR(45) NOT NULL COMMENT '省份',
   `e_express` VARCHAR(45) NOT NULL COMMENT '运费',
   PRIMARY KEY (`e_express_id`));
+
+
+CREATE TABLE `ywgsh_wxshop_dev`.`wxshop_user_sms` (
+  `us_id` INT NOT NULL AUTO_INCREMENT,
+  `us_mobile` INT(11) NOT NULL,
+  `us_sms` INT(6) NOT NULL,
+  PRIMARY KEY (`us_id`));

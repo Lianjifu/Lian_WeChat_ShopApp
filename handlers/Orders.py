@@ -33,7 +33,7 @@ class OrderHandler(BaseHandler):
         #
         # # 判断token是否过期
         # if not real_token:
-        #     return self.write(dict(errcodw=RET.NODATA, errmsg='token expire'))
+        #     return self.write(dict(errcode=RET.NODATA, errmsg='token expire'))
         #
         # # 校验token
         # if real_token != token:
@@ -57,27 +57,14 @@ class OrderHandler(BaseHandler):
         # data.append(d)
 
         # self.write(dict(errcode=RET.OK, errmsg="OK", data=data))
-        print user_id,token,"+++order+++"
+        print user_id, token, "+++order+++"
         self.write(dict(errcode=RET.OK, errmsg="OK", data=data_order))
 
 
 class SubmitOrderHandler(BaseHandler):
-    """确定订单"""
+    """提交订单"""
     # @required_login
     def post(self):
-        # ExpectParams = ["user_id", "token","product_price_total", "addr_info", "product_order_list"]
-        # RqstDt = verify_request_body(self, ExpectParams)
-        # # 校验参数
-        # if not RqstDt:
-        #     return self.write({"errcode": RET.PARAMERR, "errmsg": "params error"})
-        # user_id = str(RqstDt.get('user_id'))
-        # token = str(RqstDt.get('token'))
-        # product_price_total = str(RqstDt.get('product_price_total'))
-        # addr_info = str(RqstDt.get('addr_info'))
-        # product_order_list = str(RqstDt.get('product_order_list'))
-
-
-
         # product_id = str(RqstDt.get('product_id'))
         # product_name = str(RqstDt.get('product_name'))
         # product_price = str(RqstDt.get('product_price'))
@@ -133,7 +120,7 @@ class SubmitOrderHandler(BaseHandler):
 
         # self.write(dict(errcode=RET.OK, errmsg="OK", data=data))
         print user_id,token, product_price_total, addr_info, product_order_list,delivery_price,"=====order====="
-        self.write(dict(errcode=RET.OK, errmsg="save order OK", data=data_submit_order))
+        self.write(dict(errcode=RET.OK, errmsg="OK", data=data_submit_order))
 
 
 class CancelOrderHandler(BaseHandler):

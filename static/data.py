@@ -1,13 +1,19 @@
 # coding=utf-8
 
 data_index = {
-    "scenic_id": "scenic_001",
-    "scenic_img_url": "./static/image/scenic/scenic001.jpg",
-    "scenic_city": "上海",
-    "scenic_selected":"0",
-    "scenic_city_code": "021",
-    "banner_img_url" : "./static/image/banner/banner001.jpg",
-    "bg_img_url": "./static/image/bg/bg01.jpg"
+    "bg_img_url": "./static/image/bg/bg01.jpg",
+    "banner_img_url" : {
+        "./static/image/banner/banner001.jpg",
+        "./static/image/banner/banner002.jpg",
+        "./static/image/banner/banner003.jpg",
+                        },
+    "scenic_list":{
+        "scenic_id": "scenic_001",
+        "scenic_img_url": "./static/image/scenic/scenic001.jpg",
+        "scenic_city": "上海",
+        "scenic_selected": "0",
+        "scenic_city_code": "021",
+    }
 }
 
 data_detail = {
@@ -54,6 +60,4 @@ data_order={
 data_submit_order = {
     "order_id": "201803161534000001"
 }
-
-
 

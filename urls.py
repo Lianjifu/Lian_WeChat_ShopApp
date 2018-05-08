@@ -6,6 +6,7 @@ from handlers import Home
 from handlers import Passport
 from handlers import Address
 from handlers import Orders
+# from handlers import Pay
 
 urls = [
     (r'/api/wxshop/index',  Home.IndexHandler),
@@ -18,4 +19,6 @@ urls = [
     (r"/api/wxshop/submit_order", Orders.SubmitOrderHandler),
     # (r"/api/wxshop/ensure_order", Orders.EnsureOrderHandler),
     (r"/api/wxshop/cancel_order", Orders.CancelOrderHandler),
+    # (r"/api/wxshop/pay", Pay.PayHandler)
+
    ]

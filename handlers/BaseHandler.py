@@ -3,7 +3,7 @@
 import json
 
 from tornado.web import RequestHandler, StaticFileHandler
-from utils.session import Session
+# from utils.session import Session
 
 
 class BaseHandler(RequestHandler):
@@ -29,10 +29,10 @@ class BaseHandler(RequestHandler):
         """设置默认json格式"""
         self.set_header("Content-Type", "application/json; charset=UTF-8")
 
-    def get_current_user(self):
-        """判断用户是否登录"""
-        self.session = Session(self)
-        return self.session.data
+    # def get_current_user(self):
+    #     """判断用户是否登录"""
+    #     self.session = Session(self)
+    #     return self.session.data
 
 
 class StaticFileBaseHandler(StaticFileHandler):
