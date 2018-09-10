@@ -1,2 +1,2 @@
-# wechat_minapp
-wechat_minapp  back server 
+# Lian_WeChat_ShopApp
+Based on WeChat public account mall application
